@@ -120,7 +120,7 @@
         }
 
         .logo img {
-            height: 150px; /* Adjust based on your uploaded logo */
+            height: 50px; 
         }
 
         .nav-links {
@@ -149,8 +149,9 @@
             height: 100vh;
             display: flex;
             align-items: center;
-            background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7)), url('viber_image_2025-01-04_11-43-17-438.jpg') center/cover;
-            padding-top: 80px; /* Offset for navbar */
+            /* Added white overlay and connected the reception area image */
+            background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('viber_image_2025-01-04_11-43-17-438.jpg') center/cover;
+            padding-top: 80px;
         }
 
         .hero-content {
@@ -170,6 +171,7 @@
             font-size: 1.5rem;
             color: var(--text-color);
             margin-bottom: 40px;
+            font-weight: 500;
         }
 
         /* About Section */
@@ -193,7 +195,7 @@
             position: relative;
         }
 
-        .about-image img, .about-image video {
+        .about-image video {
             width: 100%;
             border-radius: 15px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
@@ -254,10 +256,11 @@
             margin: 0 auto;
         }
 
+        /* Connected Dr. Baaniya's photo here */
         .doctor-img {
             flex: 1;
             min-height: 400px;
-            background: url('274863845_110892188200818_7880054988556601557_n.jpg') center/cover;
+            background: url('274863845_110892188200818_7880054988556601557_n.jpg') center/cover; 
         }
 
         .doctor-info {
@@ -458,9 +461,10 @@
     <header id="header">
         <nav>
             <div class="logo">
-                <!-- Replace 'logo.png' with your uploaded logo file -->
-            <img src="viber_image_2025-02-01_14-25-46-907.png" alt="Ayna Clinic Logo">
-                <ul class="nav-links" id="nav-links">
+                <!-- Connected Ayna Logo -->
+                <img src="viber_image_2025-02-01_14-25-46-907.png" alt="Ayna Clinic Logo">
+            </div>
+            <ul class="nav-links" id="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About Us</a></li>
                 <li><a href="#services">Services</a></li>
@@ -490,10 +494,10 @@
             
             <div class="about-grid">
                 <div class="about-image">
-                    <!-- You can use your clinic interior image, logo banner, or the treatment video here -->
+                    <!-- Connected the clinic treatment video -->
                     <video autoplay loop muted playsinline>
-                      <source src="0-02-03-192aeb0b33622d915304e77846728b276725af2fa3ebec2344763c9faeb661d1_ac157ebd9f9e0722.mp4" type="video/mp4">
-                      Your browser does not support the video tag.
+                        <source src="0-02-03-192aeb0b33622d915304e77846728b276725af2fa3ebec2344763c9faeb661d1_ac157ebd9f9e0722.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
                     </video>
                 </div>
                 <div class="about-text">
@@ -551,7 +555,6 @@
             <p class="section-subtitle">Expert care you can trust</p>
 
             <div class="doctor-card">
-                <!-- The CSS sets this class to use doctor.jpg as a background image -->
                 <div class="doctor-img"></div>
                 <div class="doctor-info">
                     <h3>Dr. Bibisha Baaniya</h3>
@@ -562,7 +565,7 @@
         </div>
     </section>
 
-    <!-- Testimonials (Optional Enhancement) -->
+    <!-- Testimonials -->
     <section class="testimonials">
         <div class="container">
             <h2 class="section-title">Patient Experiences</h2>
@@ -598,9 +601,12 @@
                     </div>
                     <div class="info-item">
                         <i class="fas fa-phone-alt"></i>
-                        <p>+977 9767797950<br><small></small></p>
+                        <p>+977 9800000000 <br><small>(Replace with actual number)</small></p>
                     </div>
-                  
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>info@aynaclinic.com <br><small>(Replace with actual email)</small></p>
+                    </div>
                     <div class="info-item">
                         <i class="fas fa-clock"></i>
                         <p>Sun - Fri: 10:00 AM - 6:00 PM</p>
@@ -655,7 +661,6 @@
 
         mobileMenu.addEventListener('click', () => {
             navLinks.classList.toggle('active');
-            // Toggle icon between bars and times (close)
             const icon = mobileMenu.querySelector('i');
             if(navLinks.classList.contains('active')) {
                 icon.classList.remove('fa-bars');
@@ -691,7 +696,7 @@
         // Form Validation / Submission Alert
         const form = document.getElementById('appointmentForm');
         form.addEventListener('submit', (e) => {
-            e.preventDefault(); // Prevents actual page reload
+            e.preventDefault(); 
             const name = document.getElementById('name').value;
             alert(`Thank you, ${name}! Your appointment request has been submitted. Our team will contact you shortly.`);
             form.reset();
