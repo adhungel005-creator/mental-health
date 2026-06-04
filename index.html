@@ -45,7 +45,7 @@
     <header class="bg-white px-8 py-4 flex items-center justify-between border-b border-gray-100 z-10 relative">
         <!-- Logo -->
         <div class="flex items-center">
-            <img src="image_4d75ee.jpg" alt="SereneMind Logo" class="h-10 w-auto object-contain mix-blend-multiply">
+            <img src="logo.jpg" alt="SereneMind Logo" class="h-10 w-auto object-contain mix-blend-multiply">
         </div>
         
         <!-- Center Nav -->
@@ -193,7 +193,89 @@
 
             <!-- Column 2 -->
             <div class="flex flex-col gap-6">
-                <!-- CHART SECTION REMOVED HERE -->
+                
+                <!-- CHART SECTION INCLUDED HERE -->
+                <div class="bg-white rounded-2xl p-6 card-shadow flex-1">
+                    <h3 class="font-bold text-gray-800 text-lg mb-4">Your Weekly Progress</h3>
+            
+                    <!-- Legend -->
+                    <div class="flex items-center justify-center gap-6 mb-6 text-sm text-gray-600">
+                        <div class="flex items-center gap-2">
+                            <span class="w-2.5 h-2.5 rounded-full bg-[#638c75]"></span>Mood
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-2.5 h-2.5 rounded-full bg-[#eab308]"></span>Stress
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-2.5 h-2.5 rounded-full bg-[#3b82f6]"></span>Anxiety
+                        </div>
+                    </div>
+            
+                    <!-- Chart SVG Area -->
+                    <div class="relative w-full h-[200px]">
+                        <svg viewBox="0 0 320 160" class="w-full h-full overflow-visible">
+                            <!-- Horizontal Grid Lines -->
+                            <line x1="25" y1="10" x2="320" y2="10" stroke="#f3f4f6" stroke-width="1"></line>
+                            <line x1="25" y1="34" x2="320" y2="34" stroke="#f3f4f6" stroke-width="1"></line>
+                            <line x1="25" y1="58" x2="320" y2="58" stroke="#f3f4f6" stroke-width="1"></line>
+                            <line x1="25" y1="82" x2="320" y2="82" stroke="#f3f4f6" stroke-width="1"></line>
+                            <line x1="25" y1="106" x2="320" y2="106" stroke="#f3f4f6" stroke-width="1"></line>
+                            <line x1="25" y1="130" x2="320" y2="130" stroke="#f3f4f6" stroke-width="1"></line>
+                            <line x1="25" y1="154" x2="320" y2="154" stroke="#f3f4f6" stroke-width="1"></line>
+            
+                            <!-- Y Axis Text Labels -->
+                            <g class="text-[10px] fill-gray-500" font-family="sans-serif">
+                                <text x="18" y="13" text-anchor="end">25</text>
+                                <text x="18" y="37" text-anchor="end">20</text>
+                                <text x="18" y="61" text-anchor="end">15</text>
+                                <text x="18" y="85" text-anchor="end">10</text>
+                                <text x="18" y="109" text-anchor="end">5</text>
+                                <text x="18" y="133" text-anchor="end">0</text>
+                            </g>
+            
+                            <!-- X Axis Text Labels -->
+                            <g class="text-[10px] fill-gray-500" font-family="sans-serif">
+                                <text x="35" y="150" text-anchor="middle">Mon</text>
+                                <text x="80" y="150" text-anchor="middle">Tue</text>
+                                <text x="125" y="150" text-anchor="middle">Wed</text>
+                                <text x="170" y="150" text-anchor="middle">Thu</text>
+                                <text x="215" y="150" text-anchor="middle">Fri</text>
+                                <text x="260" y="150" text-anchor="middle">Sat</text>
+                                <text x="305" y="150" text-anchor="middle">Sun</text>
+                            </g>
+            
+                            <!-- Mood Line (Green) -->
+                            <polyline fill="none" stroke="#638c75" stroke-width="1.5" points="35,115.6 80,98.8 125,86.8 170,94 215,82 260,60.4 305,19.6" />
+                            <circle cx="35" cy="115.6" r="3" fill="#638c75" />
+                            <circle cx="80" cy="98.8" r="3" fill="#638c75" />
+                            <circle cx="125" cy="86.8" r="3" fill="#638c75" />
+                            <circle cx="170" cy="94" r="3" fill="#638c75" />
+                            <circle cx="215" cy="82" r="3" fill="#638c75" />
+                            <circle cx="260" cy="60.4" r="3" fill="#638c75" />
+                            <circle cx="305" cy="19.6" r="3" fill="#638c75" />
+            
+                            <!-- Stress Line (Yellow) -->
+                            <polyline fill="none" stroke="#eab308" stroke-width="1.5" points="35,96.4 80,77.2 125,70 170,55.6 215,82 260,86.8 305,67.6" />
+                            <circle cx="35" cy="96.4" r="3" fill="#eab308" />
+                            <circle cx="80" cy="77.2" r="3" fill="#eab308" />
+                            <circle cx="125" cy="70" r="3" fill="#eab308" />
+                            <circle cx="170" cy="55.6" r="3" fill="#eab308" />
+                            <circle cx="215" cy="82" r="3" fill="#eab308" />
+                            <circle cx="260" cy="86.8" r="3" fill="#eab308" />
+                            <circle cx="305" cy="67.6" r="3" fill="#eab308" />
+            
+                            <!-- Anxiety Line (Blue) -->
+                            <polyline fill="none" stroke="#3b82f6" stroke-width="1.5" points="35,96.4 80,34 125,50.8 170,70 215,58 260,108.4 305,91.6" />
+                            <circle cx="35" cy="96.4" r="3" fill="#3b82f6" />
+                            <circle cx="80" cy="34" r="3" fill="#3b82f6" />
+                            <circle cx="125" cy="50.8" r="3" fill="#3b82f6" />
+                            <circle cx="170" cy="70" r="3" fill="#3b82f6" />
+                            <circle cx="215" cy="58" r="3" fill="#3b82f6" />
+                            <circle cx="260" cy="108.4" r="3" fill="#3b82f6" />
+                            <circle cx="305" cy="91.6" r="3" fill="#3b82f6" />
+                        </svg>
+                    </div>
+                </div>
 
                 <!-- Personal Insights -->
                 <div class="bg-white rounded-2xl p-6 card-shadow flex-1 h-fit">
