@@ -38,12 +38,12 @@
 
     <!-- Individual Decorative Background Elements -->
     <div class="fixed inset-0 z-0 pointer-events-none overflow-hidden">
-        <!-- Right Leaves (Using the right half of the wide image) -->
-        <div class="absolute inset-y-0 right-0 w-[50vw] mix-blend-multiply opacity-80" 
+        <!-- Right Leaves -->
+        <div class="absolute inset-y-0 right-0 w-[45vw] max-w-[600px] mix-blend-multiply opacity-90" 
              style="background-image: url('image_4d5bdc.jpg'); background-size: cover; background-position: right center; background-repeat: no-repeat;">
         </div>
         <!-- Left Potted Plant -->
-        <img src="image_4d0a27.jpg" alt="Decorative Plant" class="absolute bottom-0 left-0 h-[45vh] min-h-[300px] max-h-[450px] object-contain mix-blend-multiply opacity-100 origin-bottom-left" />
+        <img src="image_4d0a27.jpg" alt="Decorative Plant" class="absolute bottom-0 left-[-2%] h-[55vh] min-h-[350px] object-contain mix-blend-multiply opacity-90 origin-bottom-left" />
     </div>
 
     <!-- Top Navigation -->
@@ -92,13 +92,13 @@
     <main class="flex-1 max-w-[1440px] mx-auto w-full px-4 lg:px-8 pb-12 flex flex-col lg:flex-row gap-6 relative z-10">
         
         <!-- Sidebar Navigation -->
-        <aside class="w-full lg:w-64 bg-white/95 backdrop-blur-sm rounded-2xl p-4 card-shadow flex flex-col relative h-[max-content]">
+        <aside class="w-full lg:w-64 bg-white rounded-2xl p-4 card-shadow flex flex-col relative h-[max-content]">
             <nav class="flex flex-col gap-2 relative z-10">
-                <a href="#" class="flex items-center justify-between bg-brand-green text-white px-4 py-3 rounded-xl text-sm font-medium">
-                    <div class="flex items-center gap-3">
-                        <i class="fa-solid fa-house w-5"></i> Dashboard
+                <a href="#" class="flex items-center justify-between bg-gray-50 px-4 py-3 rounded-xl text-sm font-medium">
+                    <div class="flex items-center gap-3 text-gray-800">
+                        <i class="fa-solid fa-house w-5 text-gray-500"></i> Dashboard
                     </div>
-                    <span class="bg-white/20 text-xs px-2 py-0.5 rounded-full">Active</span>
+                    <span class="bg-brand-green text-white text-[10px] px-2.5 py-0.5 rounded-full">Active</span>
                 </a>
                 <a href="#" class="flex items-center gap-3 text-gray-600 hover:bg-gray-50 px-4 py-3 rounded-xl text-sm font-medium transition-colors">
                     <i class="fa-regular fa-pen-to-square w-5"></i> New Entry
@@ -127,34 +127,34 @@
             <!-- Column 1 -->
             <div class="flex flex-col gap-6">
                 <!-- Daily Wellness Snapshot -->
-                <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-6 card-shadow">
+                <div class="bg-white rounded-2xl p-6 card-shadow">
                     <h3 class="font-bold text-gray-800 text-lg mb-6">Daily Wellness Snapshot</h3>
                     <p class="text-center text-gray-500 text-sm mb-4">Mood Tracker</p>
                     
                     <div class="flex justify-between items-center mb-8 px-2">
                         <!-- Mood: Sad (Default Active) -->
                         <div class="flex flex-col items-center gap-2 cursor-pointer group" onclick="selectMood(this)">
-                            <div class="mood-icon w-10 h-10 rounded-full bg-red-400 flex items-center justify-center text-xl shadow-sm border-2 border-transparent ring-2 ring-red-200 scale-110 opacity-100 transition-all duration-200">☹️</div>
+                            <div class="mood-icon w-10 h-10 rounded-full bg-red-400 flex items-center justify-center text-xl shadow-sm border border-gray-300 ring-2 ring-red-200 scale-110 opacity-100 transition-all duration-200">☹️</div>
                             <span class="text-xs text-gray-500">Sad</span>
                         </div>
                         <!-- Mood: Confused -->
                         <div class="flex flex-col items-center gap-2 cursor-pointer group" onclick="selectMood(this)">
-                            <div class="mood-icon w-10 h-10 rounded-full bg-orange-300 flex items-center justify-center text-xl shadow-sm border-2 border-transparent opacity-50 hover:opacity-80 transition-all duration-200">😕</div>
+                            <div class="mood-icon w-10 h-10 rounded-full bg-orange-300 flex items-center justify-center text-xl shadow-sm border border-gray-300 opacity-60 hover:opacity-100 transition-all duration-200">😕</div>
                             <span class="text-xs text-transparent">Confused</span>
                         </div>
                         <!-- Mood: Neutral -->
                         <div class="flex flex-col items-center gap-2 cursor-pointer group" onclick="selectMood(this)">
-                            <div class="mood-icon w-10 h-10 rounded-full bg-yellow-200 flex items-center justify-center text-xl shadow-sm border-2 border-transparent opacity-50 hover:opacity-80 transition-all duration-200">😐</div>
+                            <div class="mood-icon w-10 h-10 rounded-full bg-yellow-200 flex items-center justify-center text-xl shadow-sm border border-gray-300 opacity-60 hover:opacity-100 transition-all duration-200">😐</div>
                             <span class="text-xs text-transparent">Neutral</span>
                         </div>
                         <!-- Mood: Good -->
                         <div class="flex flex-col items-center gap-2 cursor-pointer group" onclick="selectMood(this)">
-                            <div class="mood-icon w-10 h-10 rounded-full bg-green-200 flex items-center justify-center text-xl shadow-sm border-2 border-transparent opacity-50 hover:opacity-80 transition-all duration-200">🙂</div>
+                            <div class="mood-icon w-10 h-10 rounded-full bg-green-200 flex items-center justify-center text-xl shadow-sm border border-gray-300 opacity-60 hover:opacity-100 transition-all duration-200">🙂</div>
                             <span class="text-xs text-transparent">Good</span>
                         </div>
                         <!-- Mood: Happy -->
                         <div class="flex flex-col items-center gap-2 cursor-pointer group" onclick="selectMood(this)">
-                            <div class="mood-icon w-10 h-10 rounded-full bg-green-400 flex items-center justify-center text-xl shadow-sm border-2 border-transparent opacity-50 hover:opacity-80 transition-all duration-200">😀</div>
+                            <div class="mood-icon w-10 h-10 rounded-full bg-green-400 flex items-center justify-center text-xl shadow-sm border border-gray-300 opacity-60 hover:opacity-100 transition-all duration-200">😀</div>
                             <span class="text-xs text-gray-500 transition-opacity duration-200 opacity-100">Happy</span>
                         </div>
                     </div>
@@ -166,7 +166,7 @@
                 </div>
 
                 <!-- AI Chatbot Assistant -->
-                <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-6 card-shadow flex-1">
+                <div class="bg-white rounded-2xl p-6 card-shadow flex-1">
                     <h3 class="font-bold text-gray-800 text-lg mb-4">AI Chatbot Assistant</h3>
                     
                     <div class="bg-brand-green rounded-t-xl rounded-bl-xl p-3 text-white text-sm mb-3 flex items-start gap-3 relative">
@@ -184,7 +184,7 @@
 
                     <div class="relative mt-auto">
                         <input type="text" placeholder="Ask SereneMind..." class="w-full border border-gray-200 rounded-full py-3 pl-4 pr-12 text-sm focus:outline-none focus:border-brand-green">
-                        <button class="absolute right-2 top-1.5 w-9 h-9 bg-brand-green text-white rounded-full flex items-center justify-center">
+                        <button class="absolute right-2 top-1.5 w-9 h-9 bg-brand-green text-white rounded-full flex items-center justify-center hover:bg-opacity-90">
                             <i class="fa-solid fa-paper-plane text-xs"></i>
                         </button>
                     </div>
@@ -194,7 +194,7 @@
             <!-- Column 2 -->
             <div class="flex flex-col gap-6">
                 <!-- Weekly Progress Chart -->
-                <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-6 card-shadow flex-1">
+                <div class="bg-white rounded-2xl p-6 card-shadow flex-1">
                     <h3 class="font-bold text-gray-800 text-lg mb-4">Your Weekly Progress</h3>
             
                     <!-- Legend -->
@@ -277,7 +277,7 @@
                 </div>
 
                 <!-- Personal Insights -->
-                <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-6 card-shadow flex-1 h-fit">
+                <div class="bg-white rounded-2xl p-6 card-shadow flex-1 h-fit">
                     <h3 class="font-bold text-gray-800 text-lg mb-4">Personal Insights</h3>
                     <div class="bg-brand-light rounded-xl p-4 flex gap-4 items-start border border-green-100/50">
                         <div class="w-10 h-10 bg-brand-green text-white rounded-full flex items-center justify-center shrink-0 shadow-sm mt-1">
@@ -293,7 +293,7 @@
             <!-- Column 3 -->
             <div class="flex flex-col gap-6">
                 <!-- Journal Feed -->
-                <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-6 card-shadow">
+                <div class="bg-white rounded-2xl p-6 card-shadow">
                     <h3 class="font-bold text-gray-800 text-lg mb-6">Journal Feed</h3>
                     <div class="flex justify-between text-xs text-gray-500 mb-4 px-2">
                         <span>Recent</span>
@@ -310,7 +310,7 @@
                                     <span class="font-semibold text-gray-800 text-sm">Reflection</span>
                                     <span class="bg-gray-100 text-gray-500 text-[10px] px-2 py-0.5 rounded-full">Oct 25</span>
                                 </div>
-                                <div class="w-6 h-6 rounded-full bg-green-200 flex items-center justify-center text-xs">🙂</div>
+                                <div class="w-6 h-6 rounded-full bg-green-200 border border-green-300 flex items-center justify-center text-xs shadow-sm">🙂</div>
                             </div>
                             <p class="text-xs text-gray-500 leading-snug">Stressed with work deadlines, even their face and interesting m...</p>
                         </div>
@@ -323,7 +323,7 @@
                                     <span class="font-semibold text-gray-800 text-sm">Reflection</span>
                                     <span class="bg-gray-100 text-gray-500 text-[10px] px-2 py-0.5 rounded-full">Oct 36</span>
                                 </div>
-                                <div class="w-6 h-6 rounded-full bg-yellow-100 flex items-center justify-center text-xs">😐</div>
+                                <div class="w-6 h-6 rounded-full bg-yellow-100 border border-yellow-200 flex items-center justify-center text-xs shadow-sm">😐</div>
                             </div>
                             <p class="text-xs text-gray-500 leading-snug">Stressed with work deadlines, in each end-noan sensiting and leh...</p>
                         </div>
@@ -336,7 +336,7 @@
                                     <span class="font-semibold text-gray-800 text-sm">Reflection</span>
                                     <span class="bg-gray-100 text-gray-500 text-[10px] px-2 py-0.5 rounded-full">Oct 36</span>
                                 </div>
-                                <div class="w-6 h-6 rounded-full bg-yellow-100 flex items-center justify-center text-xs">😐</div>
+                                <div class="w-6 h-6 rounded-full bg-yellow-100 border border-yellow-200 flex items-center justify-center text-xs shadow-sm">😐</div>
                             </div>
                             <p class="text-xs text-gray-500 leading-snug">Stressed with work deadlines, in and consistent conditiool meas...</p>
                         </div>
@@ -344,7 +344,7 @@
                 </div>
 
                 <!-- Quick Tools -->
-                <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-6 card-shadow flex-1 h-fit">
+                <div class="bg-white rounded-2xl p-6 card-shadow flex-1 h-fit">
                     <h3 class="font-bold text-gray-800 text-lg mb-4">Quick Tools</h3>
                     <div class="flex flex-col gap-3">
                         <button class="w-full flex items-center gap-3 bg-brand-light text-gray-700 px-4 py-3 rounded-xl hover:bg-brand-green/20 transition-colors border border-green-100/50">
@@ -372,7 +372,7 @@
             // Reset all emojis to inactive state
             allMoods.forEach(icon => {
                 icon.classList.remove('scale-110', 'opacity-100', 'ring-2');
-                icon.classList.add('opacity-50');
+                icon.classList.add('opacity-60');
             });
 
             // Reset all labels to hidden except the first and last (Sad/Happy anchors)
@@ -387,7 +387,7 @@
             const targetIcon = selectedElement.querySelector('.mood-icon');
             const targetLabel = selectedElement.querySelector('span');
             
-            targetIcon.classList.remove('opacity-50');
+            targetIcon.classList.remove('opacity-60');
             targetIcon.classList.add('scale-110', 'opacity-100', 'ring-2');
             
             // Show label for the clicked item
