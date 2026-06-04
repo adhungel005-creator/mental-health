@@ -34,18 +34,23 @@
         ::-webkit-scrollbar { width: 0px; background: transparent; }
     </style>
 </head>
-<body class="min-h-screen flex flex-col relative">
+<body class="min-h-screen flex flex-col relative overflow-x-hidden">
 
-    <!-- Full Screen Decorative Background -->
-    <div class="fixed inset-0 w-full h-full z-0 pointer-events-none opacity-60" 
-         style="background-image: url('plants-bg.jpg'); background-size: cover; background-position: bottom center; mix-blend-mode: multiply;">
+    <!-- Individual Decorative Background Elements -->
+    <div class="fixed inset-0 z-0 pointer-events-none overflow-hidden">
+        <!-- Right Leaves (Using the right half of the wide image) -->
+        <div class="absolute inset-y-0 right-0 w-[50vw] mix-blend-multiply opacity-80" 
+             style="background-image: url('image_4d5bdc.jpg'); background-size: cover; background-position: right center; background-repeat: no-repeat;">
+        </div>
+        <!-- Left Potted Plant -->
+        <img src="image_4d0a27.jpg" alt="Decorative Plant" class="absolute bottom-0 left-0 h-[45vh] min-h-[300px] max-h-[450px] object-contain mix-blend-multiply opacity-100 origin-bottom-left" />
     </div>
 
     <!-- Top Navigation -->
     <header class="bg-white px-8 py-4 flex items-center justify-between border-b border-gray-100 z-10 relative">
         <!-- Logo -->
         <div class="flex items-center">
-            <img src="logo.png" alt="SereneMind Logo" class="h-10 w-auto object-contain mix-blend-multiply">
+            <img src="image_4d75ee.jpg" alt="SereneMind Logo" class="h-10 w-auto object-contain mix-blend-multiply">
         </div>
         
         <!-- Center Nav -->
@@ -77,7 +82,6 @@
 
     <!-- Main Title Area -->
     <div class="text-center py-8 relative z-10">
-        <!-- Kept the text here exactly as it was in the original dashboard design -->
         <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-2">
             Serene<span class="text-brand-green">Mind</span>
         </h1>
@@ -88,7 +92,7 @@
     <main class="flex-1 max-w-[1440px] mx-auto w-full px-4 lg:px-8 pb-12 flex flex-col lg:flex-row gap-6 relative z-10">
         
         <!-- Sidebar Navigation -->
-        <aside class="w-full lg:w-64 bg-white rounded-2xl p-4 card-shadow flex flex-col relative h-[max-content]">
+        <aside class="w-full lg:w-64 bg-white/95 backdrop-blur-sm rounded-2xl p-4 card-shadow flex flex-col relative h-[max-content]">
             <nav class="flex flex-col gap-2 relative z-10">
                 <a href="#" class="flex items-center justify-between bg-brand-green text-white px-4 py-3 rounded-xl text-sm font-medium">
                     <div class="flex items-center gap-3">
@@ -115,10 +119,6 @@
                     <i class="fa-regular fa-circle-question w-5"></i> Help
                 </a>
             </nav>
-            <!-- Decorative Plant graphic (CSS interpretation) -->
-            <div class="mt-12 flex justify-center opacity-70 relative z-0">
-                <i class="fa-brands fa-pagelines text-6xl text-green-200"></i>
-            </div>
         </aside>
 
         <!-- Main Content Grid -->
@@ -127,7 +127,7 @@
             <!-- Column 1 -->
             <div class="flex flex-col gap-6">
                 <!-- Daily Wellness Snapshot -->
-                <div class="bg-white rounded-2xl p-6 card-shadow">
+                <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-6 card-shadow">
                     <h3 class="font-bold text-gray-800 text-lg mb-6">Daily Wellness Snapshot</h3>
                     <p class="text-center text-gray-500 text-sm mb-4">Mood Tracker</p>
                     
@@ -166,7 +166,7 @@
                 </div>
 
                 <!-- AI Chatbot Assistant -->
-                <div class="bg-white rounded-2xl p-6 card-shadow flex-1">
+                <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-6 card-shadow flex-1">
                     <h3 class="font-bold text-gray-800 text-lg mb-4">AI Chatbot Assistant</h3>
                     
                     <div class="bg-brand-green rounded-t-xl rounded-bl-xl p-3 text-white text-sm mb-3 flex items-start gap-3 relative">
@@ -193,9 +193,8 @@
 
             <!-- Column 2 -->
             <div class="flex flex-col gap-6">
-                
-                <!-- CHART SECTION INCLUDED HERE -->
-                <div class="bg-white rounded-2xl p-6 card-shadow flex-1">
+                <!-- Weekly Progress Chart -->
+                <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-6 card-shadow flex-1">
                     <h3 class="font-bold text-gray-800 text-lg mb-4">Your Weekly Progress</h3>
             
                     <!-- Legend -->
@@ -278,7 +277,7 @@
                 </div>
 
                 <!-- Personal Insights -->
-                <div class="bg-white rounded-2xl p-6 card-shadow flex-1 h-fit">
+                <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-6 card-shadow flex-1 h-fit">
                     <h3 class="font-bold text-gray-800 text-lg mb-4">Personal Insights</h3>
                     <div class="bg-brand-light rounded-xl p-4 flex gap-4 items-start border border-green-100/50">
                         <div class="w-10 h-10 bg-brand-green text-white rounded-full flex items-center justify-center shrink-0 shadow-sm mt-1">
@@ -294,7 +293,7 @@
             <!-- Column 3 -->
             <div class="flex flex-col gap-6">
                 <!-- Journal Feed -->
-                <div class="bg-white rounded-2xl p-6 card-shadow">
+                <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-6 card-shadow">
                     <h3 class="font-bold text-gray-800 text-lg mb-6">Journal Feed</h3>
                     <div class="flex justify-between text-xs text-gray-500 mb-4 px-2">
                         <span>Recent</span>
@@ -345,7 +344,7 @@
                 </div>
 
                 <!-- Quick Tools -->
-                <div class="bg-white rounded-2xl p-6 card-shadow flex-1 h-fit">
+                <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-6 card-shadow flex-1 h-fit">
                     <h3 class="font-bold text-gray-800 text-lg mb-4">Quick Tools</h3>
                     <div class="flex flex-col gap-3">
                         <button class="w-full flex items-center gap-3 bg-brand-light text-gray-700 px-4 py-3 rounded-xl hover:bg-brand-green/20 transition-colors border border-green-100/50">
